@@ -1,0 +1,15 @@
+{
+    "name": "youtube",
+    "displayname": "Youtube",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "scaling": false,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "http://youtube.com/tv",
+        "customnavigation" : true
+    },
+    "permissions": ["root", "avoidexit"]
+}

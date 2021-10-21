@@ -1,0 +1,14 @@
+{
+    "name": "settings",
+    "displayname": "Settings",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "index.html",
+        "customnavigation" : true
+    },
+    "permissions": ["root", "avoidexit"]
+}

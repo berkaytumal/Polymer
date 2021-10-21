@@ -1,0 +1,13 @@
+{
+    "name": "netflix",
+    "displayname": "Netflix",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "https://netflix.com"
+    },
+    "permissions": ["root", "avoidexit"]
+}

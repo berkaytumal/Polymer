@@ -1,0 +1,10 @@
+{
+    "name": "facebook",
+    "displayname": "Facebook Watch",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "screenratio": "16:9"
+    }
+}

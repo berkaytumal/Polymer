@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script id="nodepkg">
+        window.$ = window.jQuery = require('jquery');
+        const {
+            ipcRenderer
+        } = require('electron')
+        const path = require('path');
+
+        const fs = require('fs');
+    </script>
+    <script src="bez.js"></script>
+    <link rel="stylesheet" href="../../library/system/fonts/fonts.css">
+    <link rel="stylesheet" href="../../library/materialicons/material-icons.css">
+    <style id="systemstyle">
+         ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        body {
+            font-size: 20px;
+            background: rgba(20, 20, 20);
+            color: rgb(220, 220, 220);
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <h1 class="apptitle">Settings</h1>
+    <ul id="settingslist1" class="focuspane">
+        <div id="scrolltitle1">Choose a network</div>
+        <li class="selected"><span class="material-icons md-24">wifi</span>Wi-Fi</li>
+        <li><span class="material-icons md-24">bluetooth</span> Bluetooth </li>
+        <li><span class="material-icons md-24">settings</span>General</li>
+        <li><span class="material-icons md-24">info</span>About</li>
+    </ul>
+    <div id="settingslist2">
+        <ul class="focus">
+            <li class="selected">Loading</li>
+            <li class="title">Choose a network</li>
+            <li>Wi-Fi</li>
+        </ul>
+        <ul>
+            <li class="selected">2</li>
+            <li class="title">Choose a network</li>
+            <li>Wi-Fi</li>
+        </ul>
+        <ul>
+            <li class="selected">3</li>
+            <li class="title">Choose a network</li>
+            <li>Wi-Fi</li>
+        </ul>
+        <ul>
+            <li class="selected">4</li>
+            <li class="title">Choose a network</li>
+            <li>Wi-Fi</li>
+        </ul>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

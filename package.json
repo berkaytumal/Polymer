@@ -1,0 +1,17 @@
+{
+    "name": "rpitv",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "dependencies": {
+        "electron": "^15.0.0",
+        "jquery": "^3.6.0",
+        "wifi-control": "^2.0.1",
+        "win-audio": "^2.0.2"
+    },
+    "scripts": {
+        "start": "electron ./system/main.js"
+    },
+    "author": "",
+    "license": "ISC"
+}

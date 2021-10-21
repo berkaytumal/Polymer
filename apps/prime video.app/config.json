@@ -1,0 +1,13 @@
+{
+    "name": "primevideo",
+    "displayname": "Prime Video",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "index.html"
+    },
+    "permissions": ["root", "avoidexit"]
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Graphene TV</title>
+    <link rel="stylesheet" href="system/style-min.css">
+
+
+    <body>
+        <link rel="stylesheet" href="library/system/fonts/fonts.css">
+
+        <link rel="stylesheet" href="library/system/controls.css">
+        <link rel="stylesheet" href="library/materialicons/material-icons.css">
+
+        <script id="nodepkg">
+            window.$ = window.jQuery = require('jquery');
+            const {
+                ipcRenderer
+            } = require('electron')
+            const path = require('path');
+            const fs = require('fs');
+            const audio = require('win-audio').speaker;
+
+            audio.polling(100);
+            var hudtimeout
+            var ismuted
+
+            function ShowHUD() {
+                clearTimeout(hudtimeout)
+                var hud = $("#volumehud")
+                hud.addClass("shown");
+                hudtimeout = setTimeout(() => {
+                    if (!ismuted) {
+                        hud.removeClass("shown")
+                    }
+                }, 2000);
+            }
+            audio.events.on('change', (volume) => {
+                ShowHUD()
+                console.log("old %d%% -> new %d%%", volume.old, volume.new);
+                $("#vollevel").css("width", volume.new + "%")
+            });
+
+            audio.events.on('toggle', (status) => {
+                ShowHUD()
+                var hud = $("#volumehud")
+                var hudicon = $("#volumehud span")
+
+                ismuted = status.new
+                if (status.new) {
+                    hud.addClass("muted")
+                    console.log("volume muted")
+                    hudicon.html("volume_off")
+
+                } else {
+                    hud.removeClass("muted")
+                    hudicon.html("volume_up")
+                    console.log("volume unmuted")
+
+                }
+            });
+        </script>
+        <canvas id="backo"></canvas>
+        <h1 id="aodclock">Saat</h1>
+        <div id="content">
+            <div id="volumehud">
+                <span class="material-icons">volume_up</span>
+                <div id="volmax">
+                    <div id="vollevel">
+
+                    </div>
+                </div>
+            </div>
+            <div id="apps">
+
+
+            </div>
+            <svg id="pageident">
+
+        </svg>
+        </div>
+        <script src="system/script.js"></script>
+        <script>
+            fs.readdir("apps", function(err, files) {
+                //handling error
+                if (err) {
+                    return console.log('Unable to scan directory: ' + err);
+                }
+                //listing all files using forEach
+                files.forEach(function(file) {
+
+                    // Do whatever you want to do with the file
+                    var name = String(file)
+                    var title = name.substring(0, name.length - 4);
+
+                    $("#apps").append('<app name="' + title + '">')
+                });
+
+
+            });
+        </script>
+    </body>
+
+</html>

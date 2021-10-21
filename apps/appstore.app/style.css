@@ -1,0 +1,151 @@
+.apptitle {
+    box-sizing: border-box;
+    position: absolute;
+    padding-top: 40px;
+    padding-left: 60px;
+    margin: 0px;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(10px);
+    top: 0px;
+    left: 1px;
+    width: 400px;
+    height: 110px;
+    box-shadow: inset 0px -1px 0px rgb(255, 255, 255, 0.05);
+}
+
+#settingslist1,
+#settingslist2 {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0px;
+    position: fixed;
+    top: 0px;
+    width: 400px;
+    height: 450px;
+}
+
+#settingslist1 {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    left: 0px;
+}
+
+#settingslist2 {
+    z-index: 5;
+    box-shadow: inset 2px 0px 0px rgb(255, 255, 255, 0.05);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    left: 400px;
+}
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+ul * {
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    margin: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 7px;
+    box-sizing: border-box;
+    background: rgb(30, 30, 30);
+    color: rgb(200, 200, 200);
+}
+
+#settingslist1 li {
+    align-items: start;
+    height: 42px !important;
+    margin-right: 25px;
+}
+
+#settingslist2 li {
+    margin-left: 12px;
+}
+
+#settingslist1 *.selected {
+    border-color: rgba(0, 212, 255);
+    background: linear-gradient(356deg, rgba(96, 86, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+#settingslist2 *.selected {
+    border-color: rgba(0, 212, 255);
+}
+
+#settingslist2 ul {
+    display: none;
+}
+
+#settingslist2 ul.focus {
+    display: block;
+}
+
+.selected {
+    transform: scale(1.02);
+}
+
+.selected.pressed {
+    transform: scale(0.97);
+}
+
+ul *.title {
+    top: 0px;
+    padding-top: 20px;
+    border: none;
+    background: none;
+}
+
+#scrolltitle2 {
+    box-sizing: border-box;
+    visibility: hidden;
+    position: fixed;
+    left: 390px;
+    width: 400px;
+    height: 60px;
+    padding-left: 29px !important;
+    padding-top: 20px !important;
+    border: none !important;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 19px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    box-shadow: inset 0px -1px 0px rgb(255, 255, 255, 0.05);
+    color: rgb(200, 200, 200);
+}
+
+#scrolltitle1 {
+    box-sizing: border-box;
+    visibility: hidden;
+    position: fixed;
+    border-radius: unset;
+    left: 0px;
+    top: 120px;
+    width: 400px;
+    height: 45px;
+    margin: 0px;
+    padding: 10px 57px !important;
+    border: none !important;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 30%, rgba(255, 255, 255, 0) 100%);
+    box-sizing: border-box;
+    color: rgb(200, 200, 200);
+}
+
+.material-icons {
+    color: white;
+    background: transparent;
+    display: table;
+    float: left;
+    border: 0px !important;
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px !important;
+    height: 0px !important;
+}

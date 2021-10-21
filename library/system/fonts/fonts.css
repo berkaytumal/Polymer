@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: url(Roboto-Medium.ttf) format('woff2'), url(Roboto-Medium.ttf) format('woff'), url(Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: url(Roboto-Medium.ttf) format('woff2'), url(Roboto-Medium.ttf) format('woff'), url(Roboto-Medium.ttf) format('truetype');
+}
+
+body {
+    font-family: 'Roboto';
+}

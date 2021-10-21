@@ -1,0 +1,14 @@
+{
+    "name": "keycodeinfo",
+    "displayname": "keycode.info",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "scaling": false,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "https://keycode.info/"
+    },
+    "permissions": ["root", "avoidexit"]
+}

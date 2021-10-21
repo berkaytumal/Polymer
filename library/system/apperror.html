@@ -1,0 +1,16 @@
+<div id="error">
+    <style>
+
+    </style>
+
+    <h2>ALERT_TITLE</h2>
+    <p>ALERT_DESCRIPTION</p>
+    <button id="alertbtn" style="color:rgb(255, 255, 255,0.5);">ALERT_BUTTON</button>
+    <script>
+        $("#error").css("top", (225 - ($("#error").height() / 2)) + "px")
+        $("#alertbtn").focus()
+        $("#alertbtn").click(function() {
+            CloseFlyouts()
+        })
+    </script>
+</div>

@@ -1,0 +1,12 @@
+{
+    "name": "browser",
+    "displayname": "Browser",
+    "developer": "Graphene Apps",
+    "version": "1.0.0",
+    "window": {
+        "fullscreen": true,
+        "screenratio": "16:9",
+        "pointer": false,
+        "url": "index.html"
+    }
+}
