@@ -1,4 +1,4 @@
-# Polymer
+# Polymer TV
 ##### HTPC Software With Full Remote Control Support
 
 This project is moved to SourceForge
